@@ -53,7 +53,7 @@ const Sidebar = () => {
                     const Icon = side.icon;
                     return (
                         <li key={side.id} className="mb-3">
-                            <NavLink to={side.link} className={({ isActive }) => isActive ? 'bg-primary text-black font-semibold flex items-center w-full px-3 py-2 rounded-sm' : 
+                            <NavLink to={side.link} className={({ isActive }) => isActive ? 'bg-black text-white font-semibold flex items-center w-full px-3 py-2 rounded-sm' : 
                             'flex items-center w-full px-3 py-2 rounded-sm' }>
                                <span className="mr-3"><Icon/></span>
                                <p>{side.menu}</p>
