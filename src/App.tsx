@@ -12,8 +12,8 @@ function App() {
   return (
    <Routes>
     {/* Layout Route: Sidebar + Outlet for children */}
-    <Route path="/" element={<Layout/>}>
-      <Route index element={<Dashboard/>}/>
+    <Route  element={<Layout/>}>
+      <Route path="dashboard" element={<Dashboard/>}/>
       <Route path="transaction" element={<Transaction/>}/>
       <Route path="report" element={<Report/>}/>
       <Route path="setting" element={<Setting/>}/>

@@ -4,6 +4,7 @@ import { RxDashboard, RxPieChart } from "react-icons/rx";
 import { AiOutlineTransaction } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
+import Profile from "./Profile";
 
 
 const Sidebar = () => {
@@ -18,7 +19,7 @@ const Sidebar = () => {
         {
             id: 1,
             menu: "Dashboard",
-            link: "/",
+            link: "dashboard",
             icon: RxDashboard
         },
         {
@@ -42,7 +43,7 @@ const Sidebar = () => {
      ]
 
   return (
-    <nav>
+    <nav className="relative md:h-full">
         <Link to="/" >
             <Logo/>
         </Link>
@@ -62,6 +63,11 @@ const Sidebar = () => {
                     )
                 })}
             </ul>
+        </div>
+
+        {/***Navbar footer***/}
+        <div className="absolute bottom-0 w-full md:block hidden">
+            <Profile/>
         </div>
     </nav>
   )

@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Profile from './Profile';
 
 const Greeting = () => {
 

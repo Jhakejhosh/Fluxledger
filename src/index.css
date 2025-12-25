@@ -22,7 +22,7 @@
   }
 
   .p {
-    @apply text-[13px] font-normal text-gray-600
+    @apply text-sm font-normal text-gray-600
   }
 
   .section {
