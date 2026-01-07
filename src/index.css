@@ -22,11 +22,23 @@
   }
 
   .p {
-    @apply text-sm font-normal text-gray-600
+    @apply text-[13px] font-normal text-gray-600
   }
 
   .section {
     @apply pt-6
+  }
+  .input {
+    @apply bg-gray-50 text-sm px-6 py-3 rounded-md outline-0 mt-3
+  }
+  .label {
+    @apply font-semibold
+  }
+  .input-error {
+    @apply text-[12px] text-red-500 pb-3
+  }
+  .form-button {
+    @apply px-6 py-3 text-center rounded-md bg-black text-white cursor-pointer w-full
   }
 }
 * {
