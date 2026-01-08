@@ -38,7 +38,7 @@
     @apply text-[12px] text-red-500 pb-3
   }
   .form-button {
-    @apply px-6 py-3 text-center rounded-md bg-black text-white cursor-pointer w-full
+    @apply px-6 py-3 text-center rounded-md cursor-pointer w-full
   }
 }
 * {

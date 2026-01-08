@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { PiEyeSlash, PiEyeLight } from "react-icons/pi";
 import { useState } from 'react';
+import GoogleAuth from '../../components/ui/GoogleAuth';
+import { Link } from 'react-router-dom';
 
 const registerSchema = z.object({
   name: z.string().min(1, { message: 'Name must be at least 1 character' }),
@@ -37,7 +39,7 @@ const Register = () => {
   return (
     <div className='lg:w-1/3 w-full md:w-1/2'>
       <h1 className="font-bold text-2xl text-center">Create an account</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className='pt-6'>
         <div className='flex flex-col'>
           <label className='label'>Name</label>
           <input {...register('name')} placeholder='Business name' 
@@ -71,9 +73,16 @@ const Register = () => {
           {errors.confirmPassword && <p className='input-error'>{errors.confirmPassword.message}</p>}
         </div>
         {/***remember me button */}
-        <button type="submit" disabled={isSubmitting} className='form-button'>
+        <button type="submit" disabled={isSubmitting} className='form-button bg-black text-white'>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
+        <div>
+          <p className='p text-center py-6'>Or</p>
+        </div>
+        <GoogleAuth/>
+        <p className='text-sm text-center py-3'>Already have an account?  
+          <Link to='/login' className='text-blue-500'>Login</Link>
+        </p>
       </form>
     </div>
   )

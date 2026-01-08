@@ -8,7 +8,7 @@ const AuthLayout = () => {
         <div className="py-2 px-6">
             <Logo/>
         </div>
-        <main className="md:flex items-center justify-center mt-20 lg:px-10 px-4">
+        <main className="md:flex items-center justify-center mt-15 lg:px-10 px-4">
             <Outlet/>
         </main>
     </div>
