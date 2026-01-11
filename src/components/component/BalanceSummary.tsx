@@ -29,7 +29,7 @@ const BalanceSummary = () => {
           amount={120000} description="Growth rate" rate={20} explanation="All the money that came into the business during one month (sales, payments, services, etc.)"/>
           <Card cardType="Expenses" icon={PiPiggyBank} bgColor="bg-redBg" color="text-red" 
           amount={30000} description="Spending growth" rate={5} explanation="All the money that went out of the business in one month (rent, supplies, salaries, ads, etc.)"/>
-          <Card cardType="Net" icon={LuTrendingUpDown} bgColor="bg-blueBg" color="text-blue" 
+          <Card cardType="Net Profit/Loss" icon={LuTrendingUpDown} bgColor="bg-blueBg" color="text-blue" 
           amount={40000} description="Profit/loss" rate={13} explanation="The money you made (or lost) after paying all expenses this month. It tells you if the business is actually profitable or losing money"/>
         </div>
     </div>

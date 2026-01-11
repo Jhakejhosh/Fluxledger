@@ -42,12 +42,12 @@ const Login = () => {
         </div>
         <div className='flex flex-col relative'>
           <label className='label'>Password</label>
-          <input {...register('password')} placeholder='********' 
+          <div className='relative'><input {...register('password')} placeholder='********' 
           type={showPassword ? "text" : "password"}
-          className='input'/>
-          <span className='absolute top-[60%] right-6 text-gray-500' onClick={() => setShowPassword(!showPassword)}>
+          className='input w-full'/>
+          <span className='absolute top-[50%] right-6 text-gray-500' onClick={() => setShowPassword(!showPassword)}>
             {showPassword ? <PiEyeLight/> : <PiEyeSlash/>}
-          </span>
+          </span></div>
           {errors.password && <p className='input-error'>{errors.password.message}</p>}
         </div>
         {/**Forgot password***/}
@@ -59,7 +59,7 @@ const Login = () => {
           <p className='p text-center py-6'>Or</p>
         </div>
         <GoogleAuth/>
-        <p className='text-sm text-center py-3'>Don't have an account?  
+        <p className='text-sm py-3 flex justify-center items-center gap-1'>Don't have an account?  
           <Link to='/register' className='text-blue-500'>Register</Link>
         </p>
       </form>

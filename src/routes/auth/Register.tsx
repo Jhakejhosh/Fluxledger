@@ -54,22 +54,22 @@ const Register = () => {
         </div>
         <div className='flex flex-col relative'>
           <label className='label'>Password</label>
-          <input {...register('password')} placeholder='********' 
+          <div className='relative'><input {...register('password')} placeholder='********' 
           type={showPassword ? "text" : "password"}
-          className='input'/>
-          <span className='absolute top-[60%] right-6 text-gray-500' onClick={() => setShowPassword(!showPassword)}>
+          className='input w-full'/>
+          <span className='absolute top-[50%] right-6 text-gray-500' onClick={() => setShowPassword(!showPassword)}>
             {showPassword ? <PiEyeLight/> : <PiEyeSlash/>}
-          </span>
+          </span></div>
           {errors.password && <p className='input-error'>{errors.password.message}</p>}
         </div>
         <div className='flex flex-col relative'>
           <label className='label'>Confirm password</label>
-          <input {...register('confirmPassword')} placeholder='********' 
+          <div className='relative'><input {...register('confirmPassword')} placeholder='********' 
           type={showConfirmPassword ? "text" : "password"}
-          className='input'/>
-          <span className='absolute top-[60%] right-6 text-gray-500' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
+          className='input w-full'/>
+          <span className='absolute top-[50%] right-6 text-gray-500' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
             {showConfirmPassword ? <PiEyeLight/> : <PiEyeSlash/>}
-          </span>
+          </span></div>
           {errors.confirmPassword && <p className='input-error'>{errors.confirmPassword.message}</p>}
         </div>
         {/***remember me button */}
@@ -80,7 +80,7 @@ const Register = () => {
           <p className='p text-center py-6'>Or</p>
         </div>
         <GoogleAuth/>
-        <p className='text-sm text-center py-3'>Already have an account?  
+        <p className='text-sm py-3 flex gap-1 justify-center items-center'>Already have an account?  
           <Link to='/login' className='text-blue-500'>Login</Link>
         </p>
       </form>

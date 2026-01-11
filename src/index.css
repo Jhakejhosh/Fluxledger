@@ -6,11 +6,11 @@
   --color-primary: #fafdff;
   --color-secondary: #e9eef2;
   --color-green: #02e8a3;
-  --color-greenBg: rgba(2, 232, 163, 0.1);
+  --color-greenBg: rgba(2, 232, 163, 0.08);
   --color-red: #e80602;
-  --color-redBg: rgba(232, 6, 2, 0.1);
+  --color-redBg: rgba(232, 6, 2, 0.08);
   --color-blue: #0360ab;
-  --color-blueBg: rgba(3, 96, 171, 0.1)
+  --color-blueBg: rgba(3, 96, 171, 0.08)
 }
 @layer components {
   .h1 {
